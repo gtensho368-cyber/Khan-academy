@@ -1,0 +1,33 @@
+
+import random
+imp = int(input("Pick an even number between 1 and 10: "))
+if imp == 2 or imp == 4 or imp == 6 or imp == 8 or imp == 10:
+    for imp in range(2, 20, 2):
+        print(imp)
+else:
+    print("That is not an even number")
+
+print("Now let's stimulate a bee hive")
+
+# Bee hive simulation
+needsNectar =  2000
+hasNectar = 0
+deposits = 0
+
+# Week of hive activity
+for hour in range(7*18):
+    
+    # dropoff of bees depositing nectar
+    dropoff = random.randint(hasNectar//4, hasNectar//2)
+    deposits = deposits + dropoff
+
+
+    # probability of finding nectar
+    pickups = random.randint(needsNectar//4, needsNectar//2)
+
+    hasNectar = pickups + hasNectar + dropoff
+    needsNectar = needsNectar - pickups - dropoff
+
+# 90 deposits to make a gram of honey
+honey = deposits // 90  
+print(f"Total honey produced: {honey} grams")
