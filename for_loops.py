@@ -1,11 +1,4 @@
 
-import random
-imp = int(input("Pick an even number between 1 and 10: "))
-if imp == 2 or imp == 4 or imp == 6 or imp == 8 or imp == 10:
-    for imp in range(2, 20, 2):
-        print(imp)
-else:
-    print("That is not an even number")
 
 print("Now let's stimulate a bee hive")
 
