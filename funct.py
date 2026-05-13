@@ -9,9 +9,9 @@ import random
 # Module for functions of a murim themed game
 
 def technique():
-    """Randomly generates techniques numbers to determine rank"""
+    """Randomly generates techniques numbers"""
     num = random.randint(1, 200)
-    if num < 150:
+    if num < 100:
         rank = "a Master"
     else:
         rank = "an Elite"
