@@ -1,19 +1,65 @@
 
 import random
-# I don't want to create multiple files for diffrent projects, so i'm putting all my functions here.
+"""WERE I PUT ALL MY PROJECTS FUNCTIONS"""
 
-# Module for functions of a football game
+# DNA mutation project functions
+""" Generates the nucleiotide bases for a DNA sequence """
+def get_random_base(base):
+    purines = ["A", "G"]
+    pyrimides = ["C", "T"]
 
-
-
-# Module for functions of a murim themed game
-
-def technique():
-    """Randomly generates techniques numbers to determine rank"""
-    num = random.randint(1, 200)
-    if num < 150:
-        rank = "a Master"
+    if base in purines:
+        choices = [b for b in purines if b != base]
     else:
-        rank = "an Elite"
+        choices = [b for b in pyrimides if b != base]
+
+    return random.choice(choices)
+
+
+
+
+
+# Avatar generator 
+""" Generates features for a avatar """
+def nose(num):
+    if num == 1:
+        print("   >") 
+    elif num == 2:
+        print("   @")
+    else: 
+        raise ValueError("non valid nose")
     
-    return rank
+def ear(num):
+    """ Generates the character hairline"""
+    if num == 1:
+        print(" -----")
+    elif num == 2:
+        print(" /-\_/-\\")
+    else:
+        raise ValueError("non valid scalp")
+    
+def eyes(num):
+    if num == 1:
+        print("  0 - 0 ")
+    elif num == 2:
+        print("  ö . ö ")
+    else:
+        raise ValueError("non valid scalp")
+    
+def mouth(num):
+    if num == 1:
+        print(" -----")
+    elif num == 2:
+        print(" (||||)")
+    else:
+        raise ValueError("non valid mouth")
+    
+
+
+# Longest name 
+def find_longest_name(names):
+    longest = "" 
+    for name in names:
+        if len(name) > len(longest):
+            longest = name
+    return print(f"Longest name is {longest}")
