@@ -1,0 +1,145 @@
+
+""" AUTOMATING TASKS WITH LISTS """
+import random
+import functions
+
+""" LESSON 2: LIST ITERATIONS """
+info = [80, 91, 92, 100, 85]
+top_mark = 0
+
+""" While loops """
+# index = 0
+# while index < len(info) - 1:
+#     if info[index] >= 90:
+#         top_mark += 1
+         
+#     index += 1
+# print(f"You got {top_mark} top mark!")
+
+""" For loops """
+# for i in range(len(info)):
+#     if info[i] >= 90:
+#         top_mark += 1
+# print(f"You got {top_mark} top marks!")
+
+""" For each loops """
+# for grade in info:
+#     if grade >= 90:
+#         top_mark += 1
+# print(f"You got {top_mark} top marks!")
+
+""" IN OPERATORS  """
+# data = [1, 3, 6, 9, 6, 7, 4, 8]
+
+# num = int(input("Enter a number from 1 to 10: "))
+
+# if num in data:
+#     print(f"{num} is in the list")
+# elif num not in data:
+#     print(f"{num} is not in the list")
+# else:
+#     print("Try again.")
+
+""" Searching for an element """
+# data = [2, 3, 5, 4, 5]
+
+# has_bad_review = False
+# for review in data:
+#     if review < 3:
+#         has_bad_review = True
+#         break
+
+# if has_bad_review:
+#     print("Bad review ditected") 
+
+""" Modifying elements """
+# data = [32.34235, 35.246644, 46.46434, 25.464311]
+
+# for i in range(len(data)):
+#     data[i] = round(data[i], 2)
+
+# print(data)
+
+
+""" Keeping track of states """
+data = [34, 32, 35, 64, 46]
+
+# biggest = data[0]
+
+# for num in data:
+#     if num > biggest:
+#         biggest = num
+
+# print(f"Biggest number is: {biggest}") 
+
+""" Syntax shortcuts """
+# minimum = min(data)
+# maximum = max(data)
+# addieren = sum(data)
+
+# print(minimum)
+# print(maximum)
+# print(addieren)
+
+""" Lists and functions """
+# names = ["Maxwell", "Adaobi", "Chimereze", "Vivian", "Chibuzor", "Sylvester"]
+# functions.find_longest_name(names)
+
+""" Generalize with length """
+# prices = [23.3425, 36.4623, 56.2454]
+# for i in range(len(prices)):
+#     prices[i] = round(prices[i], 2)
+# print(prices)
+
+""" Check for valid inclusion """
+# def in_compass(direction):
+#     """ Returns true if direction is valid """
+#     return direction in ["W", "S", "E", "N"]
+
+# direction = ""
+# while not in_compass(direction):
+#     direction = input("Enter a compass direction: ")
+
+""" Skip unneeded element """
+# def get_average_temperature(temperatures):
+#     counts = 0
+#     total = 0
+
+#     for temp in temperatures:
+#         # Extreme cases are likely false readings
+#         if temp < 30 or temp > 40:
+#             continue
+
+#         total += 1
+#         counts += temp
+
+#     return round(counts / total, 1)
+
+# Temperatures = [34.323, 42.552, 35.5343, 36.585]
+# average = get_average_temperature(Temperatures)
+# print(f"The average temperature is {average}")
+
+""" Return from all branches """
+# def find_empty_slot(slots):
+#     """ Returns the index of empty slots """
+#     for i in range(len(slots)):
+#         if slots[i] == "":
+#             return i 
+#     return -1
+
+# invent = ["we", "cronus", "athena", "zeus", "", "rabies", ""]
+
+# slot = find_empty_slot(invent)
+# if slot >= 0:
+#     invent[slot] = "pump"
+# print(invent)
+
+
+
+
+
+
+
+
+
+
