@@ -3,7 +3,7 @@ import random
 
 # MODULE IMPORTS:
 
-# Rolls a six sided dice
+# Rolls a six sided dice.
 dice = random.randint(1, 6)
 print(f"You rolled a {dice}")
 

@@ -1,7 +1,7 @@
 import random
 import functions
 
-#PROJECT: DNA mutations
+#PROJECT: DNA mutations.
 data = ["T", "G", "C", "A", "G"]
 
 num = random.randint(1, 3)
