@@ -2,7 +2,7 @@
 import random
 
 # LIST INDICES
-data = [1, 2, 3, 4, 5]
+data = [1, 2, 3, 4, 5, 6]
 
 # Negative indices
 print(data[-1])
