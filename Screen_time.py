@@ -1,9 +1,9 @@
 
 import random
 import functions
-import datas
+import lists_data
 
-data = datas.screen_time
+data = lists_data.screen_time
 
 
 

@@ -1,6 +1,20 @@
 
 import random
-import functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
