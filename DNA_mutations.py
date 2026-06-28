@@ -15,7 +15,8 @@ for mutation in range(num):
     base_position = random.choices(range(length), weight)[0]
     current_base = data[base_position]
     new_base = functions.get_random_base(current_base)
-    data[base_position - 1] = new_base
+    data[base_position] = new_base
+
 
 
 print("".join(data))

@@ -1,6 +1,11 @@
 
 """ Module for dictionaries """
 
+# Student grades
+grade_tracker = {"Max": 85, "Alice": 92}
+
+
+
 # School  by assignments
 grade_tracker = data = {
     "Math": {
