@@ -32,7 +32,7 @@ def ear(num):
     elif num == 2:
         print(" /-\\_/-\\")
     else:
-        raise ValueError("non valid scalp")
+        raise ValueError("non valid ear")
     
 def eyes(num):
     if num == 1:
@@ -40,7 +40,7 @@ def eyes(num):
     elif num == 2:
         print("  ö . ö ")
     else:
-        raise ValueError("non valid scalp")
+        raise ValueError("non valid eyes")
     
 def mouth(num):
     if num == 1:
@@ -114,38 +114,34 @@ def initialize():
 
 # Rock Paper Scissors game
 """ Validates player's choice """
-def player_choice(): 
-    valid = ("Rock", "Paper", "Scissors")
-    answer = input("Pick Rock, Paper or Scissors: ")
-
-    while answer not in valid:
-        answer = input("Retry: ")
-    return answer
-
-def computer_choice():
-    """ Picks the computer choice evenly """
-    comp = random.randint(1, 3)
-    if comp == 3:
-        return "Scissors"
-    elif comp == 2:
-        return "Paper"
+def comp_choice():
+    """ Generate random choice """
+    option = random.randint(1, 3)
+    if option == 1:
+        return "rock"
+    elif option == 2:
+        return "paper"
     else:
-        return "Rock"
+        return "scissors"
+    
+def player(play):
+        """ Validates user input """
+        game = ["rock", "paper", "scissors"]
+        if play.lower() in game:
+            play = play.lower()
+        else:
+             play = input("Retry: ")
+        return play
 
-def win_format(comp, user):
-    """ Determine win format by returning a boolean value """
-    if user == "Rock" and comp == "Scissors":
-        return True
-    elif user == "Scissors" and comp == "Paper":
-        return True
-    elif user == "Paper" and comp == "Rock":
-        return True
-    else:
-        return False
-
-def score_format(comp, user):
-    """ Returns the scores of bote sides """
-    return print(f"Score>> {user}(you) - {comp}")
+def win(comp, player):
+     if comp == "rock" and player == "scissors":
+          return True
+     elif comp == "scissors" and player == "paper":
+          return True
+     elif comp == "paper" and player == "rock":
+          return True
+     else:
+          return False
 
 # Robot simulator
 """ Reverses direction """
@@ -180,6 +176,46 @@ def move_robot_forward(pos, direction, grid_line):
         return max(1, pos - 1)
     else:
         return min(pos + 1, grid_line)
+
+
+# Murim combat simulator 
+""" Determines the combat move """
+def arts_combat():
+    art_1 = "Tiger fist"
+    art_2 = "Moon blade"
+    
+    chose = random.randint(1, 2)
+    if chose == 1:
+        return art_1
+    else:
+        return art_2
+
+# Encrypting a message
+def encryption(message, key):
+    """ Returns the encrytion of a message """
+    result = ""
+    
+    for char in message: 
+        if char.isalpha():
+            base = ord("A") if char.isupper() else ord("a")
+            shift = (ord(char) - base + key) % 26
+            result += (chr(base + shift))
+        else: 
+            result += char 
+
+    return result
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

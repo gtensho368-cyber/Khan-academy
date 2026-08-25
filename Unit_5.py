@@ -198,17 +198,36 @@ data = [34, 32, 35, 64, 46]
 # print(get_domain("khan@test.example.org"))
 
 # CSV file
-def reset_stats(row):
-    stat = row.split(",")
-    for i in range(len(stat)):
-        if stat[i].isdigit():
-            stat[i] = "0"
-    return ",".join(stat)
+# def reset_stats(row):
+#     stat = row.split(",")
+#     for i in range(len(stat)):
+#         if stat[i].isdigit():
+#             stat[i] = "0"
+#     return ",".join(stat)
 
 
-row = "Lionel Messi,Inter Miami,1756,86,45,forward"
-print(reset_stats(row))
+# row = "Lionel Messi,Inter Miami,1756,86,45,forward"
+# print(reset_stats(row))
 
+""" Lesson 4: List mutations """
+List = ["Max", "Me", "Tea", "Brea", "Knee"]
+# # Immutable
+# List.append("Ree")
+# List.insert(2, "Tee")
+# print(List)
+# # Deleting
+# List.pop()
+# print(List)
+# print(List.pop(2))
+# print(List)
+# List.remove("Brea")
+# print(List)
+
+# Pass by Assignment
+def remove_from_list(list, new):
+    """ Replaces an element in a list randomly """
+    num = random.randint(1, 5)
+    return list.insert(num, "Chia")
 
 
 
