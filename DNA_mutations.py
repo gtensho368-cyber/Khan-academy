@@ -21,3 +21,16 @@ for mutation in range(num):
 
 print("".join(data))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
